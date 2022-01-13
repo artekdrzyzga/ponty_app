@@ -9,8 +9,20 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <%= yield %>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <header id="header" class="alt">		
+			 <!-- <a href="index.html" class="fas fa-home"></a> -->
+				<nav>
+          <a href="models.html">Modele</a>
+          <a href="services.html">Usługi</a>
+          <a href="galery.html">Galeria</a>
+          <a href="faq.html">FAQ</a>
+          <a href="#footer">Kontakt</a>
+          <a href="log_in.html">Strefa klienta</a>
+				</nav>
+			</header>
+      <%= yield %>
+    </div>
   </body>
 </html>
