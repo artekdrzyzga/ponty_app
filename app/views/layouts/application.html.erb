@@ -14,15 +14,43 @@
       <header id="header" class="alt">		
 			 <!-- <a href="index.html" class="fas fa-home"></a> -->
 				<nav>
-          <a href="models.html">Modele</a>
-          <a href="services.html">Usługi</a>
-          <a href="galery.html">Galeria</a>
-          <a href="faq.html">FAQ</a>
-          <a href="#footer">Kontakt</a>
-          <a href="log_in.html">Strefa klienta</a>
+          <a href="#">Rower</a>
+          <a href="#">Serwis</a>
+          <a href="#">Instrukcje</a>
+          <%if current_user %>
+            <%= current_user.email %>
+          <%end%>
+          <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
 				</nav>
 			</header>
       <%= yield %>
+
+
+
+		<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Pontybike. All rights reserved.</li><li>Design: <a href="#">PONTYBIKE</a></li>
+							</ul>
+						</div>
+
+
+
+
     </div>
+
+<!--  
+    <script src="<%= asset_path 'main.js' %>"></script>   
+    <script src="<%= asset_path 'util.js' %>"></script> 
+    <script src="<%= asset_path 'breakpoints.min.js' %>"></script> 
+    <script src="<%= asset_path 'browser.min.js' %>"></script> 
+    <script src="<%= asset_path 'jquery.scrollex.min.js' %>"></script>
+    <script src="<%= asset_path 'jquery.min.js' %>"></script>
+
+   --> 
+
+    
+    
   </body>
 </html>
