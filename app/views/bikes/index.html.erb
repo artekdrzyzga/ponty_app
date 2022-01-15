@@ -1,0 +1,42 @@
+<section id="wrapper">
+  <section id="one" class="wrapper spotlight style1">
+	<!--	<div class="triangle"></div> -->
+	  <div class="inner">
+		  <div class="content">
+        <% if @bikes.count > 1%>
+				  <h2 class="major">Moje rowery</h2>
+        <%else%>
+          <h2 class="major">Moj rower</h2>
+        <%end%>
+				<p>Znajdujesz sie w strefie twoich rowerow jesli masz wiecej niz jednego znajdziesz je na liscie ponizej</p>
+				<!--	<a href="#" class="special">Więcej</a> -->  
+        <div class="table-wrapper">
+          <table>
+						<thead>
+              <tr>
+                <th>Id</th>
+								<th>Nazwa</th>
+								<th>Numer seryjny</th>
+								<th>Kolor</th>
+							</tr>
+            </thead>
+            <tbody>
+              <% @bikes.each do |bike| %>
+                <tr onclick="location.href='<%= bike_path(bike) %>'">
+                  <td style="text-align: left"><%= bike.id %></td>
+                  <td style="text-align: left"><%=bike.name%></td>
+                  <td style="text-align: left"><%= bike.serial %></td>
+                  <td style="text-align: left"><%= bike.color %></td>
+								</tr>
+              <%end%> 
+
+            </tbody>
+          </table>
+        </div>
+			</div>
+		</div>
+	</section>
+</section>
+
+
+
