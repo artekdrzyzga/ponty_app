@@ -1,6 +1,93 @@
+<section id="banner">
+  <div class="inner">
+      <h2>Cześć, nazywam się PONTY</h2>
+      <p> Budujemy rowery dla Ciebie. </p>
+  </div>
+</section>
+
+<section id="wrapper">
+    <section id="three" class="wrapper spotlight style3">
+        <div class="inner">
+          <a href="models.html" class="image"><%= image_tag("modele.png") %></a>
+            <div class="content">
+                <h2 class="major"><%=@bike.name%></h2>
+                		<div class="table-wrapper">
+											<table>
+												<tbody>
+													<tr>
+														<td>Silnik</td>
+														<td><%= @bike.engine%></td>
+													</tr>
+                          <tr>
+														<td>Kolor</td>
+														<td><%= @bike.color%></td>
+													</tr>
+                           <tr>
+														<td>Numer</td>
+														<td><%= @bike.serial%></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="four" class="wrapper alt style1">
+      <div class="inner">
+        <h2 class="major">Telemetria</h2>
+        <div class="box alt">
+          <div class="row gtr-uniform">
+
+  
+
+
+          	<div class="table-wrapper">
+
+            <table>
+												<thead>
+													<tr>
+														<th>Id</th>
+														<th>Predkosc</th>
+														<th>Tryb</th>
+                            <th>Data/Godzina</th>
+													</tr>
+												</thead>
+								
+                <tbody>
+
+                <% @telemetries.each do |telemetry| %>
+                  <tr>
+														<td><%= telemetry.id %></td>
+														<td><%= telemetry.speed %></td>
+														<td><%= telemetry.mode %></td>
+                            <td><%= telemetry.updated_at %></td>
+													</tr>
+
+              <%end%> 
+
+                </tbody>
+            </table>    
+												
+
+
+            </div>
 
 
 
 
 
-<h1> <%=@bike.name%> </h1>
+      	
+          </div>
+        </div>
+        <ul class="actions">
+          <li><a href="galery.html" class="button">Zobacz wszystkie</a></li>
+        </ul>
+      </div>
+			</section>
+
+
+
+</section>
+
+

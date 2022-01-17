@@ -10,8 +10,8 @@ class BikesController < ApplicationController
   end
 
   def show
+    @telemetries = Telemetry.all
     
-    #@product = Product.find(params[:id])
     @bike = Bike.find(params[:id])
   end
 
